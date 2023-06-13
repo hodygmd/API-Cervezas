@@ -23,11 +23,11 @@ public class CervezaController {
     public ResponseEntity<Cerveza> createCerveza(@RequestBody CervezaDto cervezaDto){
         return new ResponseEntity<>(service.createCerveza(cervezaDto),HttpStatus.CREATED);
     }
-    @PutMapping("/update/{id}")
+    @PutMapping("/update/{idCerveza}")
     public ResponseEntity<Cerveza> updateCerveza(@PathVariable("idCerveza") Integer id, @RequestBody CervezaDto cervezaDto){
         return new ResponseEntity<>(service.updateCerveza(id,cervezaDto),HttpStatus.OK);
     }
-    @PutMapping("/delete/{id}")
+    @PutMapping("/delete/{idCerveza}")
     public ResponseEntity<Cerveza> deleteCerveza(@PathVariable("idCerveza") Integer id){
         return new ResponseEntity<>(service.deleteCerveza(id),HttpStatus.OK);
     }

@@ -24,11 +24,11 @@ public class ContenidoController {
     public ResponseEntity<Contenido> createContenido(@RequestBody ContenidoDto contenidoDto){
         return new ResponseEntity<>(service.createContenido(contenidoDto),HttpStatus.CREATED);
     }
-    @PutMapping("/update/{id}")
+    @PutMapping("/update/{idContenido}")
     public ResponseEntity<Contenido> updateContenido(@PathVariable("idContenido") Integer id, @RequestBody ContenidoDto contenidoDto){
         return new ResponseEntity<>(service.updateContenido(id,contenidoDto),HttpStatus.OK);
     }
-    @PutMapping("/delete/{id}")
+    @PutMapping("/delete/{idContenido}")
     public ResponseEntity<Contenido> deleteContenido(@PathVariable("idContenido") Integer id){
         return new ResponseEntity<>(service.deleteContenido(id),HttpStatus.OK);
     }

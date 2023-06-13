@@ -23,11 +23,11 @@ public class MarcaController {
     public ResponseEntity<Marca> createMarca(@RequestBody MarcaDto marcaDto){
         return new ResponseEntity<>(service.createMarca(marcaDto),HttpStatus.CREATED);
     }
-    @PutMapping("/update/{id}")
+    @PutMapping("/update/{idMarca}")
     public ResponseEntity<Marca> updateMarca(@PathVariable("idMarca") Integer id,@RequestBody MarcaDto marcaDto){
         return new ResponseEntity<>(service.updateMarca(id,marcaDto),HttpStatus.OK);
     }
-    @PutMapping("/delete/{id}")
+    @PutMapping("/delete/{idMarca}")
     public ResponseEntity<Marca> deleteMarca(@PathVariable("idMarca") Integer id){
         return new ResponseEntity<>(service.deleteMarca(id),HttpStatus.OK);
     }
