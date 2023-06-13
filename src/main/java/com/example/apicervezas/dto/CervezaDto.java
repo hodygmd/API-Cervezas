@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class CervezaDto {
+    private Integer id;
     private String nombre;
     private String descripcion;
     private Integer id_marca;
